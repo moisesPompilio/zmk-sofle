@@ -123,9 +123,9 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: LAYER0, h: toggle}
   - {t: LAYER0, h: toggle, type: held}
-  - $$mdi:apple-keyboard-shift$$
-  - $$mdi:mouse-left-click-outline$$
   - $$mdi:apple-keyboard-control$$
+  - $$mdi:mouse-left-click-outline$$
+  - $$mdi:apple-keyboard-shift$$
   - {t: '$$mdi:transfer$$', type: trans}
   - '2'
   - {t: '$$mdi:transfer$$', type: trans}
