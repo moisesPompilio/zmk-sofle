@@ -93,11 +93,11 @@
 
         layer_1 {
             bindings = <
-&kp ESC    &kp F1   &kp F2     &kp F3     &kp F4     &kp F5      &mmv MOVE_UP     &kp F6          &kp F7          &kp F8        &kp F9           &kp F10           &kp EQUAL
-&trans     &kp F11  &kp F12    &trans     &trans     &mkp MB4    &mmv MOVE_DOWN   &kp PG_DN       &kp PG_UP       &kp INSERT    &trans           &kp LEFT_BRACKET  &kp RIGHT_BRACKET
-&trans     &trans   &mkp LCLK  &mkp MCLK  &mkp RCLK  &mkp MB5    &mmv MOVE_LEFT   &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &trans            &kp CARET
-&trans     &trans   &trans     &trans     &trans     &trans      &mmv MOVE_RIGHT  &kp LEFT        &kp DOWN        &kp UP        &kp RIGHT        &kp END           &kp HOME
-&mkp MCLK  &trans   &trans     &to 0      &to 0      &trans      &mkp LCLK        &trans          &trans          &mo 2         &trans           &trans
+&kp ESC         &kp F1   &kp F2     &kp F3     &kp F4     &kp F5            &mmv MOVE_UP     &kp F6          &kp F7          &kp F8        &kp F9           &kp F10           &kp EQUAL
+&trans          &kp F11  &kp F12    &trans     &trans     &mkp MB4          &mmv MOVE_DOWN   &kp PG_DN       &kp PG_UP       &kp INSERT    &trans           &kp LEFT_BRACKET  &kp RIGHT_BRACKET
+&kp LEFT_SHIFT  &trans   &mkp LCLK  &mkp MCLK  &mkp RCLK  &mkp MB5          &mmv MOVE_LEFT   &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &trans            &kp CARET
+&kp LCTRL       &trans   &trans     &trans     &trans     &trans            &mmv MOVE_RIGHT  &kp LEFT        &kp DOWN        &kp UP        &kp RIGHT        &kp END           &kp HOME
+&mkp MCLK       &trans   &trans     &to 0      &to 0      &kp LEFT_SHIFT    &mkp LCLK        &kp RCTRL       &trans          &mo 2         &trans           &trans
             >;
 
             display-name = "layer1";
