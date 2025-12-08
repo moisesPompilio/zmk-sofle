@@ -56,7 +56,7 @@ layers:
   - $$mdi:volume-off$$
   - $$mdi:apple-keyboard-control$$
   - Sft+$$mdi:apple-keyboard-control$$
-  - $$mdi:apple-keyboard-command$$
+  - {t: '$$mdi:keyboard-esc$$', h: '$$mdi:apple-keyboard-command$$'}
   - {t: layer1, h: layer1}
   - {t: '$$mdi:keyboard-return$$', h: '$$mdi:apple-keyboard-control$$'}
   - {t: '$$mdi:keyboard-return$$', type: enter}
