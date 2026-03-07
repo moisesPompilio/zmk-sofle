@@ -62,7 +62,7 @@
         DEAD_GRAVE: DEAD_GRAVE {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kt GRAVE>, <&macro_pause_for_release>;
+            bindings = <&kp GRAVE>, <&macro_pause_for_release>;
 
             label = "DEAD_GRAVE";
         };
