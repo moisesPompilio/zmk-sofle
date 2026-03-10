@@ -61,6 +61,13 @@
         bindings = <&kp F2>, <&kp F12>;
     };
 
+    LAYER_3_1: LAYER_3_1 {
+        compatible = "zmk,behavior-tap-dance";
+        label = "LAYER_3_1";
+        #binding-cells = <0>;
+        bindings = <&holdtolayer 3 3>, <&to 1>;
+    };
+
     behaviors {
     };
 
@@ -109,11 +116,11 @@
 
         layer0 {
             bindings = <
-&trans          &trans     &trans         &trans                &trans            &trans             &kp UP_ARROW     &trans            &trans                  &trans            &trans      &trans    &trans
-&kp TAB         &kp Q      &kp W          &kp E                 &kp R             &kp T              &kp DOWN_ARROW   &kp Y             &kp U                   &kp I             &kp O       &kp P     &kp BSLH
-&kp LEFT_SHIFT  &kp A      &kp S          &kp D                 &kp F             &kp G              &kp LEFT_ARROW   &kp H             &kp J                   &kp K             &kp L       &kp SEMI  &DEAD_APOSTROPHE
-&kp LCTRL       &kp Z      &kp X          &kp C                 &kp V             &kp B              &kp RIGHT_ARROW  &kp N             &kp M                   &kp COMMA         &kp DOT     &kp FSLH  &holdtolayer 2 2
-&kp C_MUTE      &kp LCTRL  &kp LS(LCTRL)  &mt LEFT_COMMAND ESC  &holdtolayer 1 1  &mt LCTRL ENTER    &kp ENTER        &mt LSHIFT SPACE  &mt LEFT_ALT BACKSPACE  &holdtolayer 3 3  &kp DELETE  &mo 3
+&trans          &trans     &trans         &trans                &trans      &trans             &trans  &trans            &trans                  &trans            &trans      &trans    &trans
+&kp TAB         &kp Q      &kp W          &kp E                 &kp R       &kp T              &trans  &kp Y             &kp U                   &kp I             &kp O       &kp P     &kp BSLH
+&kp LEFT_SHIFT  &kp A      &kp S          &kp D                 &kp F       &kp G              &trans  &kp H             &kp J                   &kp K             &kp L       &kp SEMI  &DEAD_APOSTROPHE
+&kp LCTRL       &kp Z      &kp X          &kp C                 &kp V       &kp B              &trans  &kp N             &kp M                   &kp COMMA         &kp DOT     &kp FSLH  &holdtolayer 2 2
+&kp C_MUTE      &kp LCTRL  &kp LS(LCTRL)  &mt LEFT_COMMAND ESC  &LAYER_3_1  &mt LCTRL ENTER    &trans  &mt LSHIFT SPACE  &mt LEFT_ALT BACKSPACE  &holdtolayer 4 4  &kp DELETE  &mo 3
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
@@ -143,16 +150,16 @@
             >;
 
             display-name = "layer2";
-            sensor-bindings = <&scroll_encoder>;
+            sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
         };
 
         layer_3 {
             bindings = <
-&trans       &trans         &trans         &trans        &trans        &trans          &trans  &trans        &trans        &trans  &trans        &trans   &trans
-&kp ESC      &tap_dance_f1  &tap_dance_f2  &kp F3        &kp F4        &kp F5          &trans  &kp F6        &kp F7        &kp F8  &kp F9        &kp F10  &kp EQUAL
-&DEAD_GRAVE  &kp NUMBER_1   &kp NUMBER_2   &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5    &trans  &kp NUMBER_6  &kp NUMBER_7  &kp N8  &kp NUMBER_9  &kp N0   &kp MINUS
-&kp          &kp            &kp            &kp           &kp           &kp             &trans  &kp           &kp           &kp     &kp           &kp      &kp EQUAL
-&kp          &kp            &kp            &kp           &to 1         &kp             &trans  &kp           &kp           &to 0   &kp           &kp
+&trans       &trans         &trans         &trans            &trans        &trans             &trans  &trans                 &trans                   &trans  &trans        &trans   &trans
+&kp ESC      &tap_dance_f1  &tap_dance_f2  &kp F3            &kp F4        &kp F5             &trans  &kp F6                 &kp F7                   &kp F8  &kp F9        &kp F10  &kp EQUAL
+&DEAD_GRAVE  &kp NUMBER_1   &kp NUMBER_2   &kp NUMBER_3      &kp NUMBER_4  &kp NUMBER_5       &trans  &kp NUMBER_6           &kp NUMBER_7             &kp N8  &kp NUMBER_9  &kp N0   &kp MINUS
+&kp          &kp            &kp            &kp               &kp           &kp                &trans  &kp                    &kp                      &kp     &kp           &kp      &kp PRINTSCREEN
+&kp K_MUTE   &kp            &kp            &mt LEFT_GUI ESC  &to 0         &mt LCTRL ENTER    &trans  &mt RIGHT_SHIFT SPACE  &mt RIGHT_ALT BACKSPACE  &to 4   &kp           &kp
             >;
 
             display-name = "layer3";
@@ -161,11 +168,11 @@
 
         layer_4 {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans            &trans      &trans             &trans  &trans                 &trans                  &trans        &trans           &trans            &trans
+&trans  &trans  &trans  &trans            &trans      &trans             &trans  &trans                 &kp PAGE_DOWN           &kp PAGE_UP   &trans           &kp LEFT_BRACKET  &kp RIGHT_BRACKET
+&trans  &trans  &trans  &trans            &trans      &trans             &trans  &kp LEFT_ARROW         &kp DOWN_ARROW          &kp UP_ARROW  &kp RIGHT_ARROW  &trans            &kp CARET
+&trans  &trans  &trans  &trans            &trans      &trans             &trans  &trans                 &trans                  &trans        &trans           &trans            &trans
+&trans  &trans  &trans  &mt LEFT_GUI ESC  &LAYER_3_1  &mt LCTRL ENTER    &trans  &mt RIGHT_SHIFT SPACE  &mt LEFT_ALT BACKSPACE  &to 0         &trans           &trans
             >;
 
             display-name = "layer4";
