@@ -46,6 +46,21 @@
         tapping-term-ms = <200>;
     };
 
+    tap_dance_f1: tap_dance_f1 {
+        compatible = "zmk,behavior-tap-dance";
+        label = "TAP_DANCE_F1";
+        #binding-cells = <0>;
+        tapping-term-ms = <200>;
+        bindings = <&kp F11>, <&kp F11>;
+    };
+
+    tap_dance_f2: tap_dance_f2 {
+        compatible = "zmk,behavior-tap-dance";
+        label = "TAP_DANCE_F2";
+        #binding-cells = <0>;
+        bindings = <&kp F2>, <&kp F12>;
+    };
+
     behaviors {
     };
 
@@ -94,11 +109,11 @@
 
         layer0 {
             bindings = <
-&DEAD_GRAVE     &kp N1     &kp N2         &kp N3                &kp N4            &kp N5             &kp UP_ARROW     &kp N6            &kp N7                  &kp N8     &kp N9      &kp N0    &kp MINUS
-&kp TAB         &kp Q      &kp W          &kp E                 &kp R             &kp T              &kp DOWN_ARROW   &kp Y             &kp U                   &kp I      &kp O       &kp P     &kp BSLH
-&kp LEFT_SHIFT  &kp A      &kp S          &kp D                 &kp F             &kp G              &kp LEFT_ARROW   &kp H             &kp J                   &kp K      &kp L       &kp SEMI  &DEAD_APOSTROPHE
-&kp LCTRL       &kp Z      &kp X          &kp C                 &kp V             &kp B              &kp RIGHT_ARROW  &kp N             &kp M                   &kp COMMA  &kp DOT     &kp FSLH  &kp ENTER
-&kp C_MUTE      &kp LCTRL  &kp LS(LCTRL)  &mt LEFT_COMMAND ESC  &holdtolayer 1 1  &mt LCTRL ENTER    &kp ENTER        &mt LSHIFT SPACE  &mt LEFT_ALT BACKSPACE  &mo 2      &kp DELETE  &mo 3
+&trans          &trans     &trans         &trans                &trans            &trans             &kp UP_ARROW     &trans            &trans                  &trans            &trans      &trans    &trans
+&kp TAB         &kp Q      &kp W          &kp E                 &kp R             &kp T              &kp DOWN_ARROW   &kp Y             &kp U                   &kp I             &kp O       &kp P     &kp BSLH
+&kp LEFT_SHIFT  &kp A      &kp S          &kp D                 &kp F             &kp G              &kp LEFT_ARROW   &kp H             &kp J                   &kp K             &kp L       &kp SEMI  &DEAD_APOSTROPHE
+&kp LCTRL       &kp Z      &kp X          &kp C                 &kp V             &kp B              &kp RIGHT_ARROW  &kp N             &kp M                   &kp COMMA         &kp DOT     &kp FSLH  &holdtolayer 2 2
+&kp C_MUTE      &kp LCTRL  &kp LS(LCTRL)  &mt LEFT_COMMAND ESC  &holdtolayer 1 1  &mt LCTRL ENTER    &kp ENTER        &mt LSHIFT SPACE  &mt LEFT_ALT BACKSPACE  &holdtolayer 3 3  &kp DELETE  &mo 3
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
@@ -107,11 +122,11 @@
 
         layer_1 {
             bindings = <
-&kp ESC         &kp F1   &kp F2     &kp F3     &kp F4     &kp F5       &mmv MOVE_UP     &kp F6          &kp F7          &kp F8        &kp F9           &kp F10           &kp EQUAL
-&trans          &kp F11  &kp F12    &trans     &trans     &mkp MB4     &mmv MOVE_DOWN   &kp PG_DN       &kp PG_UP       &kp INSERT    &trans           &kp LEFT_BRACKET  &kp RIGHT_BRACKET
-&kp LEFT_SHIFT  &trans   &mkp LCLK  &mkp MCLK  &mkp RCLK  &mkp MB5     &mmv MOVE_LEFT   &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &trans            &kp CARET
-&kp LCTRL       &trans   &trans     &trans     &trans     &trans       &mmv MOVE_RIGHT  &kp LEFT        &kp DOWN        &kp UP        &kp RIGHT        &kp END           &kp HOME
-&mkp MCLK       &trans   &trans     &to 0      &to 0      &kp LCTRL    &mkp LCLK        &kp LEFT_SHIFT  &trans          &mo 2         &trans           &trans
+&trans          &trans  &trans     &trans            &trans     &trans             &mmv MOVE_UP     &trans                &trans                  &trans        &trans           &trans            &trans
+&trans          &trans  &trans     &trans            &trans     &mkp MB4           &mmv MOVE_DOWN   &kp INSERT            &kp PAGE_DOWN           &kp PG_UP     &trans           &kp LEFT_BRACKET  &kp RIGHT_BRACKET
+&kp LEFT_SHIFT  &trans  &mkp LCLK  &mkp MCLK         &mkp RCLK  &mkp MB5           &mmv MOVE_LEFT   &mmv MOVE_LEFT        &mmv MOVE_DOWN          &mmv MOVE_UP  &mmv MOVE_RIGHT  &trans            &kp CARET
+&kp LCTRL       &trans  &trans     &trans            &trans     &trans             &mmv MOVE_RIGHT  &kp LEFT              &kp DOWN                &kp UP        &kp RIGHT        &kp END           &kp HOME
+&mkp MCLK       &trans  &trans     &mt LEFT_GUI ESC  &to 0      &mt LCTRL ENTER    &mkp LCLK        &mt LEFT_SHIFT SPACE  &mt LEFT_ALT BACKSPACE  &to 3         &trans           &trans
             >;
 
             display-name = "layer1";
@@ -133,11 +148,11 @@
 
         layer_3 {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans       &trans         &trans         &trans        &trans        &trans          &trans  &trans        &trans        &trans  &trans        &trans   &trans
+&kp ESC      &tap_dance_f1  &tap_dance_f2  &kp F3        &kp F4        &kp F5          &trans  &kp F6        &kp F7        &kp F8  &kp F9        &kp F10  &kp EQUAL
+&DEAD_GRAVE  &kp NUMBER_1   &kp NUMBER_2   &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5    &trans  &kp NUMBER_6  &kp NUMBER_7  &kp N8  &kp NUMBER_9  &kp N0   &kp MINUS
+&kp          &kp            &kp            &kp           &kp           &kp             &trans  &kp           &kp           &kp     &kp           &kp      &kp EQUAL
+&kp          &kp            &kp            &kp           &to 1         &kp             &trans  &kp           &kp           &to 0   &kp           &kp
             >;
 
             display-name = "layer3";
