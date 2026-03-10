@@ -39,7 +39,7 @@ layers:
   - K
   - L
   - {t: ;, s: ':'}
-  - {t: '''', s: '"'}
+  - '&DEAD_APOSTROPHE'
   - $$mdi:apple-keyboard-control$$
   - Z
   - X
