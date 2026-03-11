@@ -168,11 +168,11 @@
 
         layer_4 {
             bindings = <
-&trans     &trans  &trans         &trans            &trans                &trans                   &trans  &trans                 &trans                  &trans        &trans           &trans            &trans
-&trans     &trans  &kp AT_SIGN    &kp PERCENT       &kp LEFT_BRACKET      &kp RIGHT_BRACKET        &trans  &kp HOME               &kp PAGE_DOWN           &kp PAGE_UP   &kp END          &kp LEFT_BRACKET  &kp RIGHT_BRACKET
-&kp GRAVE  &trans  &kp AMPERSAND  &kp ASTERISK      &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS    &trans  &kp LEFT_ARROW         &kp DOWN_ARROW          &kp UP_ARROW  &kp RIGHT_ARROW  &kp RA(COMMA)     &kp APOSTROPHE
-&trans     &trans  &kp DOLLAR     &kp DOLLAR        &kp LEFT_BRACE        &kp RIGHT_BRACE          &trans  &trans                 &trans                  &trans        &trans           &trans            &trans
-&trans     &trans  &trans         &mt LEFT_GUI ESC  &LAYER_3_1            &mt LCTRL ENTER          &trans  &mt RIGHT_SHIFT SPACE  &mt LEFT_ALT BACKSPACE  &to 0         &trans           &trans
+&trans     &trans  &trans           &trans            &trans                &trans                   &trans  &trans                 &trans                  &trans        &trans           &trans            &trans
+&trans     &trans  &kp AT_SIGN      &kp PERCENT       &kp LEFT_BRACKET      &kp RIGHT_BRACKET        &trans  &kp HOME               &kp PAGE_DOWN           &kp PAGE_UP   &kp END          &kp LEFT_BRACKET  &kp RIGHT_BRACKET
+&kp GRAVE  &trans  &kp AMPERSAND    &kp ASTERISK      &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS    &trans  &kp LEFT_ARROW         &kp DOWN_ARROW          &kp UP_ARROW  &kp RIGHT_ARROW  &kp RA(COMMA)     &kp APOSTROPHE
+&trans     &trans  &kp EXCLAMATION  &kp DOLLAR        &kp LEFT_BRACE        &kp RIGHT_BRACE          &trans  &trans                 &trans                  &trans        &trans           &trans            &trans
+&trans     &trans  &trans           &mt LEFT_GUI ESC  &LAYER_3_1            &mt LCTRL ENTER          &trans  &mt RIGHT_SHIFT SPACE  &mt LEFT_ALT BACKSPACE  &to 0         &trans           &trans
             >;
 
             display-name = "layer4";
