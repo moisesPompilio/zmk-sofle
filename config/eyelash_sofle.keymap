@@ -66,8 +66,6 @@
         label = "LAYER_3_1";
         #binding-cells = <0>;
         bindings = <&holdtolayer 3 3>, <&holdtolayer 1 1>;
-
-        tapping-term-ms = <150>;
     };
 
     behaviors {
