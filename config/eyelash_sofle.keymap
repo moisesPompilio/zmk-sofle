@@ -40,7 +40,7 @@
     holdtolayer: holdtolayer {
         compatible = "zmk,behavior-hold-tap";
         label = "HOLDTOLAYER";
-        bindings = <&mo>, <&tog>;
+        bindings = <&mo>, <&to>;
 
         #binding-cells = <2>;
         tapping-term-ms = <200>;
@@ -51,7 +51,7 @@
         label = "TAP_DANCE_F1";
         #binding-cells = <0>;
         tapping-term-ms = <200>;
-        bindings = <&kp F11>, <&kp F11>;
+        bindings = <&kp F1>, <&kp F11>;
     };
 
     tap_dance_f2: tap_dance_f2 {
@@ -65,7 +65,7 @@
         compatible = "zmk,behavior-tap-dance";
         label = "LAYER_3_1";
         #binding-cells = <0>;
-        bindings = <&holdtolayer 3 3>, <&to 1>;
+        bindings = <&holdtolayer 3 3>, <&holdtolayer 1 1>;
     };
 
     behaviors {
@@ -130,7 +130,7 @@
         layer_1 {
             bindings = <
 &trans       &trans  &trans     &trans            &trans     &trans             &mmv MOVE_UP     &trans                &trans                  &trans            &trans           &trans       &trans
-&kp C_SLEEP  &trans  &trans     &trans            &trans     &mkp MB4           &mmv MOVE_DOWN   &msc SCRL_LEFT        &msc SCRL_DOWN          &msc SCRL_DOWN    &msc SCRL_RIGHT  &kp PAGE_UP  &kp PAGE_DOWN
+&kp C_SLEEP  &trans  &trans     &trans            &trans     &mkp MB4           &mmv MOVE_DOWN   &msc SCRL_LEFT        &msc SCRL_DOWN          &msc SCRL_UP      &msc SCRL_RIGHT  &kp PAGE_UP  &kp PAGE_DOWN
 &kp K_LOCK   &trans  &mkp LCLK  &mkp MCLK         &mkp RCLK  &mkp MB5           &mmv MOVE_LEFT   &mmv MOVE_LEFT        &mmv MOVE_DOWN          &mmv MOVE_UP      &mmv MOVE_RIGHT  &kp HOME     &kp END
 &kp K_POWER  &trans  &trans     &trans            &trans     &trans             &mmv MOVE_RIGHT  &kp LEFT              &kp DOWN                &kp UP            &kp RIGHT        &trans       &trans
 &mkp MCLK    &trans  &trans     &mt LEFT_GUI ESC  &to 0      &mt LCTRL ENTER    &mkp LCLK        &mt LEFT_SHIFT SPACE  &mt LEFT_ALT BACKSPACE  &holdtolayer 4 4  &trans           &trans
