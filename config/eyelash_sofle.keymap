@@ -66,6 +66,8 @@
         label = "LAYER_3_1";
         #binding-cells = <0>;
         bindings = <&holdtolayer 3 3>, <&holdtolayer 1 1>;
+
+        tapping-term-ms = <150>;
     };
 
     behaviors {
@@ -145,7 +147,7 @@
 &kp TILDE  &bt BT_SEL 0  &bt BT_SEL 1    &bt BT_SEL 2      &bt BT_SEL 3  &bt BT_SEL 4    &mmv MOVE_UP     &rgb_ug RGB_COLOR_HSB(153,88,51)  &rgb_ug RGB_COLOR_HSB(236,100,52)  &rgb_ug RGB_COLOR_HSB(295,100,53)  &rgb_ug RGB_COLOR_HSB(168,100,50)  &rgb_ug RGB_COLOR_HSB(51,84,57)  &rgb_ug RGB_COLOR_HSB(33,96,52)
 &trans     &bt BT_CLR    &bt BT_CLR_ALL  &trans            &trans        &trans          &mmv MOVE_DOWN   &trans                            &rgb_ug RGB_EFR                    &rgb_ug RGB_EFR                    &soft_off                          &trans                           &trans
 &trans     &out OUT_USB  &out OUT_BLE    &trans            &trans        &trans          &mmv MOVE_LEFT   &trans                            &rgb_ug RGB_BRD                    &rgb_ug RGB_BRI                    &rgb_ug RGB_SPD                    &rgb_ug RGB_SPI                  &trans
-&trans     &trans        &trans          &trans            &trans        &trans          &mmv MOVE_RIGHT  &rgb_ug RGB_TOG                   &rgb_ug RGB_HUD                    &rgb_ug RGB_HUI                    &rgb_ug RGB_SAD                    &rgb_ug RGB_SAI                  &trans
+&trans     &trans        &trans          &trans            &trans        &trans          &mmv MOVE_RIGHT  &rgb_ug RGB_TOG                   &rgb_ug RGB_HUD                    &rgb_ug RGB_HUI                    &rgb_ug RGB_SAD                    &rgb_ug RGB_SAI                  &to 0
 &trans     &bootloader   &sys_reset      &kt LEFT_COMMAND  &to 0         &trans          &mkp LCLK        &trans                            &trans                             &to 0                              &sys_reset                         &bootloader
             >;
 
@@ -158,7 +160,7 @@
 &trans           &trans         &trans         &trans            &trans        &trans             &trans  &trans                 &trans                   &trans            &trans        &trans   &trans
 &kp ESC          &tap_dance_f1  &tap_dance_f2  &kp F3            &kp F4        &kp F5             &trans  &kp F6                 &kp F7                   &kp F8            &kp F9        &kp F10  &kp EQUAL
 &DEAD_GRAVE      &kp NUMBER_1   &kp NUMBER_2   &kp NUMBER_3      &kp NUMBER_4  &kp NUMBER_5       &trans  &kp NUMBER_6           &kp NUMBER_7             &kp N8            &kp NUMBER_9  &kp N0   &kp MINUS
-&kp PRINTSCREEN  &kp            &kp            &kp               &kp           &kp INSERT         &trans  &kp C_PLAY_PAUSE       &kp C_NEXT               &kp C_PREV        &kp           &kp      &kp DELETE
+&kp PRINTSCREEN  &trans         &trans         &trans            &trans        &kp INSERT         &trans  &kp C_PLAY_PAUSE       &kp C_NEXT               &kp C_PREV        &trans        &trans   &kp DELETE
 &kp K_MUTE       &trans         &trans         &mt LEFT_GUI ESC  &to 0         &mt LCTRL ENTER    &trans  &mt RIGHT_SHIFT SPACE  &mt RIGHT_ALT BACKSPACE  &holdtolayer 4 4  &trans        &trans
             >;
 
@@ -177,6 +179,16 @@
 
             display-name = "layer4";
             sensor-bindings = <&scroll_encoder>;
+        };
+
+        layer_5 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+            >;
         };
     };
 };
