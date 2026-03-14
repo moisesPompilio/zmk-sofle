@@ -51,6 +51,8 @@
         label = "TAP_DANCE_F1";
         #binding-cells = <0>;
         bindings = <&kp F1>, <&kp F11>;
+
+        tapping-term-ms = <300>;
     };
 
     tap_dance_f2: tap_dance_f2 {
