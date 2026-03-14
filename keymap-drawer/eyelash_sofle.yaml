@@ -88,7 +88,7 @@ layers:
   - {t: '$$mdi:menu-down$$', s: '$$mdi:mouse$$'}
   - $$mdi:pan-left$$
   - $$mdi:pan-down$$
-  - $$mdi:pan-down$$
+  - $$mdi:pan-up$$
   - $$mdi:pan-right$$
   - PgUp
   - PgDn
