@@ -243,8 +243,8 @@ layers:
   - Ins
   - {t: '$$mdi:transfer$$', type: trans}
   - PLAY PAUSE
-  - $$mdi:skip-next$$
   - $$mdi:skip-previous$$
+  - $$mdi:skip-next$$
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:backspace-reverse-outline$$
