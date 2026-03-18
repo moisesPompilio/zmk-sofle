@@ -285,8 +285,8 @@ layers:
   - PgDn
   - PgUp
   - END
-  - {t: '[', s: '{'}
-  - {t: ']', s: '}'}
+  - ^
+  - {t: '$$mdi:transfer$$', type: trans}
   - {t: '`', s: '~'}
   - '%'
   - '&'
@@ -307,9 +307,9 @@ layers:
   - '{'
   - '}'
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - $$mdi:volume-off$$
+  - $$mdi:volume-low$$
+  - $$mdi:volume-high$$
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
