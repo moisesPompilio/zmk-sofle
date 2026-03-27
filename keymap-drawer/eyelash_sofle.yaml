@@ -52,12 +52,12 @@ layers:
   - {t: ',', s: <}
   - {t: ., s: '>'}
   - {t: /, s: '?'}
-  - {t: layer2, h: layer2}
+  - {t: layer1, h: layer2}
   - $$mdi:volume-off$$
   - $$mdi:apple-keyboard-control$$
   - Sft+$$mdi:apple-keyboard-control$$
   - {t: '$$mdi:keyboard-esc$$', h: '$$mdi:apple-keyboard-command$$'}
-  - '&LAYER_4_1'
+  - {t: layer4, h: layer4}
   - {t: '$$mdi:keyboard-return$$', h: '$$mdi:apple-keyboard-control$$'}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:keyboard-space$$', h: '$$mdi:apple-keyboard-shift$$'}
@@ -117,12 +117,12 @@ layers:
   - $$mdi:arrow-up-bold$$
   - $$mdi:arrow-right-bold$$
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: LAYER0, h: toggle}
   - $$mdi:mouse-scroll-wheel$$
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:keyboard-esc$$', h: '$$mdi:apple-keyboard-command$$'}
-  - {t: LAYER0, h: toggle}
+  - {t: layer4, h: layer4}
   - {t: '$$mdi:keyboard-return$$', h: '$$mdi:apple-keyboard-control$$'}
   - $$mdi:mouse-left-click-outline$$
   - {t: '$$mdi:keyboard-space$$', h: '$$mdi:apple-keyboard-shift$$'}
@@ -317,7 +317,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:keyboard-esc$$', h: '$$mdi:apple-keyboard-command$$'}
-  - {t: LAYER0, h: toggle}
+  - {t: LAYER0, h: toggle, type: held}
   - {t: '$$mdi:keyboard-return$$', h: '$$mdi:apple-keyboard-control$$'}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:keyboard-space$$', h: '$$mdi:apple-keyboard-shift$$'}
