@@ -110,6 +110,34 @@
             bindings = <&kp APOSTROPHE &kp SPACE>;
             label = "DEAD_APOSTROPHE";
         };
+
+        to_layer_0: to_layer_0 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&to 0 &rgb_ug RGB_OFF>;
+            label = "TO_LAYER_0";
+        };
+
+        to_layer_1: to_layer_1 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&to 1 &rgb_ug RGB_ON &rgb_ug RGB_COLOR_HSB(240,100,50)>;
+            label = "TO_LAYER_1";
+        };
+
+        to_layer_3: to_layer_3 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&to 3 &rgb_ug RGB_ON &rgb_ug RGB_COLOR_HSB(298,100,50)>;
+            label = "TO_LAYER_3";
+        };
+
+        to_layer_4: to_layer_4 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&to 4 &rgb_ug RGB_ON &rgb_ug RGB_COLOR_HSB(118,100,52)>;
+            label = "TO_LAYER_4";
+        };
     };
 
     keymap {
